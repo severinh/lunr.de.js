@@ -6,5 +6,5 @@ It includes a German stop word filter and a stemmer.
 Credits
 -------
 
-* The list of stop words has been downloaded from [brenes's stopwords-filter repositor](https://github.com/brenes/stopwords-filter)
-* The stemmer was implemented in JavaScript by [Joder Illi](https://github.com/lambdafu/porter-stemmer/blob/master/german.js) and published under a standard standard BSD license.
+* The list of stop words has been downloaded from [brenes's stopwords-filter repository](https://github.com/brenes/stopwords-filter).
+* The stemmer implementation is due to [Joder Illi](https://github.com/lambdafu/porter-stemmer/blob/master/german.js).
