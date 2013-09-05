@@ -1,6 +1,9 @@
 {
   "name": "lunr.de.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/lunr.de.js",
-  "ignore": []
+  "ignore": [],
+  "dependencies": {
+    "lunr.js": "0.4.1"
+  }
 }
