@@ -1,0 +1,6 @@
+{
+  "name": "lunr.de.js",
+  "version": "0.1.0",
+  "main": "dist/lunr.de.js",
+  "ignore": []
+}
