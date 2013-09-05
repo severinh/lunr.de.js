@@ -8,9 +8,9 @@ thus making the full-text search of German content more robust.
 Usage
 -----
 
-Make sure to load both the core `lunr.js' and `lunr.de.js' extension.
-To build the index, use the convenience function `lunr.de' instead of `lunr'.
-`lunr.de' adds the German stop word filter and stemmer to the pipeline
+Make sure to load both the core `lunr.js` and `lunr.de.js` extension.
+To build the index, use the convenience function `lunr.de` instead of `lunr`.
+`lunr.de` adds the German stop word filter and stemmer to the pipeline
 instead of the default English one.
 
 Example:
