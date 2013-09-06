@@ -26,13 +26,19 @@ module.exports = function(grunt) {
       files: ['test/**/*.html']
     },
     jshint: {
-      files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
+      files: ['Gruntfile.js', 'src/*.js', 'test/*.js'],
       options: {
         globals: {
           console: true,
           module: true
         }
       }
+    },
+    watch: {
+      scripts: {
+        files: ['src/*.js', 'test/*.js', 'tests/*.html'],
+        tasks: ['qunit', 'jshint'],
+      },
     }
   });
 
@@ -40,6 +46,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-qunit');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default tasks
   grunt.registerTask('default', ['jshint', 'qunit', 'uglify', 'concat']);
