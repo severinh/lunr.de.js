@@ -1,4 +1,4 @@
-lunr.de.js - A German Language Extension for [lunr.js](http://lunrjs.com/)
+lunr.de.js - A German language extension for [lunr.js](http://lunrjs.com/)
 ==========================================================================
 
 [lunr.js](http://lunrjs.com/) is a simple text search engine implemented in JavaScript.
