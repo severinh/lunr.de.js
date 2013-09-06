@@ -6,20 +6,27 @@
   "keywords": ["search"],
   "bugs": "https://github.com/severinh/lunr.de.js/issues",
   "main": "dist/lunr.de.js",
-  "license": "MIT",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/severinh/lunr.de.js/blob/master/LICENSE"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/severinh/lunr.de.js"
+    "url": "git://github.com/severinh/lunr.de.js.git"
   },
   "dependencies": {
     "lunr": "~0.4.1"
   },
   "devDependencies": {
     "grunt": "git://github.com/severinh/grunt.git",
+    "grunt-cli": "~0.1.9",
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-contrib-qunit": "~0.2.2",
     "grunt-contrib-watch": "~0.5.3"
+  },
+  "scripts": {
+    "test": "grunt test --verbose"
   }
 }
