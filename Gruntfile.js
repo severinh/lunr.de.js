@@ -21,13 +21,30 @@ module.exports = function(grunt) {
         src: src,
         dest: 'dist/lunr.de.js'
       }
+    },
+    qunit: {
+      files: ['test/**/*.html']
+    },
+    jshint: {
+      files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
+      options: {
+        globals: {
+          console: true,
+          module: true
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-qunit');
 
   // Default tasks
-  grunt.registerTask('default', ['uglify', 'concat']);
+  grunt.registerTask('default', ['jshint', 'qunit', 'uglify', 'concat']);
+
+  // Test tasks
+  grunt.registerTask('test', ['jshint', 'qunit']);
 
 };
