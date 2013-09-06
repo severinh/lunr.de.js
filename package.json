@@ -1,6 +1,6 @@
 {
   "name": "lunr-de",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "German language extension for lunr.js search engine",
   "author": "Severin Heiniger",
   "keywords": ["search"],
