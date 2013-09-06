@@ -16,7 +16,7 @@
  */
 
 lunr.de = function (config) {
-  var idx = new lunr.Index;
+  var idx = new lunr.Index();
   idx.pipeline.add(lunr.de.stopWordFilter, lunr.de.stemmer);
 
   if (config) {
@@ -24,4 +24,4 @@ lunr.de = function (config) {
   }
 
   return idx;
-}
+};

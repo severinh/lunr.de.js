@@ -18,9 +18,9 @@ lunr.de.stopWordFilter = function (token) {
   if (lunr.de.stopWordFilter.stopWords.indexOf(token) === -1) {
     return token;
   }
-}
+};
 
-lunr.de.stopWordFilter.stopWords = new lunr.SortedSet;
+lunr.de.stopWordFilter.stopWords = new lunr.SortedSet();
 lunr.de.stopWordFilter.stopWords.length = 232;
 
 // The space at the beginning is crucial: It marks the empty string

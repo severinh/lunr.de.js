@@ -56,7 +56,7 @@ lunr.de.stemmer = (function () {
     var r2 = '';
     
     if (r1Index != -1) {
-      var r2Index = r1.search(/[aeiouyäöü][^aeiouyäöü]/);
+      r2Index = r1.search(/[aeiouyäöü][^aeiouyäöü]/);
       if (r2Index != -1) {
         r2Index += 2;
         r2 = r1.substring(r2Index);
@@ -243,7 +243,7 @@ lunr.de.stemmer = (function () {
     word = word.replace(/ü/g, 'u');
     
     return word;
-  };
+  }
 
   return stemmer;
 })();
