@@ -1,29 +1,30 @@
 module.exports = function(grunt) {
 
-  src = [
-    'src/lunr.de.js',
-    'src/stemmer.js',
-    'src/stop_word_filter.js'
-  ];
-
   // Project configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    uglify: {
-      dist_min: {
-        files: {
-          'dist/lunr.de.min.js': src 
-        }
-      }
-    },
     concat: {
       dist: {
-        src: src,
+        src: [
+          'src/lunr.de.js',
+          'src/stemmer.js',
+          'src/stop_word_filter.js'
+        ],
         dest: 'dist/lunr.de.js'
       }
     },
+    uglify: {
+      dist: {
+        src: '<%%= concat.dist.dest %>',
+        dest: 'dist/lunr.de.min.js'
+      }
+    },
     qunit: {
-      files: ['test/**/*.html']
+      all: {
+        options: {
+          urls: ['http://localhost:3000/test/index.html']
+        }
+      }
     },
     jshint: {
       files: ['Gruntfile.js', 'src/*.js', 'test/*.js'],
@@ -39,6 +40,14 @@ module.exports = function(grunt) {
         files: ['src/*.js', 'test/*.js', 'tests/*.html'],
         tasks: ['qunit', 'jshint'],
       },
+    },
+    connect: {
+      server: {
+        options: {
+          hostname: '*',
+          port: 3000
+        }
+      }
     }
   });
 
@@ -47,11 +56,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default tasks
-  grunt.registerTask('default', ['jshint', 'qunit', 'uglify', 'concat']);
+  grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
 
   // Test tasks
-  grunt.registerTask('test', ['jshint', 'qunit']);
+  grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
 
 };

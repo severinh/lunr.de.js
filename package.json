@@ -24,7 +24,11 @@
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-contrib-qunit": "~0.2.2",
-    "grunt-contrib-watch": "~0.5.3"
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-connect": "~0.5.0",
+    "lunr": "~0.4.1",
+    "qunit": "~0.5.16",
+    "es5-shim": "~2.1.0"
   },
   "scripts": {
     "test": "grunt test --verbose"
