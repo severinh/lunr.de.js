@@ -1,6 +1,8 @@
 lunr.de.js - A German language extension for [lunr.js](http://lunrjs.com/)
 ==========================================================================
 
+[![Build Status](https://travis-ci.org/severinh/lunr.de.js.png)](https://travis-ci.org/severinh/lunr.de.js)
+
 [lunr.js](http://lunrjs.com/) is a simple text search engine implemented in JavaScript.
 lunr.de.js adds a German stop word filter and stemmer to the lunr.js pipeline,
 thus making text search more robust for German content.
