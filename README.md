@@ -19,6 +19,8 @@ Example:
 ```javascript
 var index = lunr(function() {
   this.use(lunr.de);
+  this.field("title", 10);
+  this.field("body");
 });
 ```
 
