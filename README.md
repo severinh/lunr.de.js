@@ -10,7 +10,7 @@ thus making text search more robust for German content.
 Usage
 -----
 
-Include the plugin into a lunr index using lunr.Index.prototype.use.
+Include the plugin into a lunr index using `lunr.Index.prototype.use`.
 This plugin will replace the default stopword filter and stemmer with
 a German language specifc filter and stemmer.
 
